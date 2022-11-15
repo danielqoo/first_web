@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Eng.ver - SmartFactory,Education,Consulting,SystemsIntergrations</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="apple-touch-icon" sizes="180x180" href="static/image/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="static/image/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="static/image/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="static/image/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="static/image/android-chrome-512x512.png">
+        <link rel="manifest" href="static/image/site.webmanifest">
+        <link rel="mask-icon" href="static/image/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#2d89ef">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="../static/css/main.css">
+        <link rel="stylesheet" type="text/css" href="../static/css/swiper.min.css">
+        <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+        <script src="https://kit.fontawesome.com/87b0d47aaf.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    </head>
+    <body>
+
+        <!-- Header -->
+            <header id="header">
+                <div class="inner">
+                    <a href="{{url_for('eng')}}" class="logo"><img id="imgsize" src="../static/image/scadaict_eng_001.png" style="position: absolute; width: 8em; height: 2.2em; top: 16.24px;"></a>
+                    <nav id="nav">
+                        <a href= "{{url_for('about')}}"><font face = 'NanumGothic'>About</font></a>
+                        <a href= "{{url_for('policy')}}"><font face = 'NanumGothic'>Korean MSS's policy</font></a>
+                        <a href= "{{url_for('solution')}}"><font face = 'NanumGothic'>Solution</font></a>
+                        <a href= "{{url_for('stories')}}"><font face = 'NanumGothic'>Stories</font></a>
+                        <a href= "{{url_for('contact')}}"><font face = 'NanumGothic'>Contact</font></a>
+                        <a href= "{{url_for('educenter')}}"><font face = 'NanumGothic'>Educenter</font></a>
+                </nav>
+                </div>
+            </header>
+            <a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+
+
+    	<!-- Banner -->
+            <section id="banner007">
+                <div class="inner">
+                    <h2><font face = 'NanumGothic'>교육센터</font></h2>
+                        <h5><font face = 'NanumGothic'>4차 산업혁명 시대를 맞아 산업구조 변화에 따른 스마트팩토리 전문 인재를 육성하고</font><br>
+                            <font face = 'NanumGothic'>담당 실무자들의 운영역량 향상을 위해 현장 중심의 교육 프로그램을 제공합니다</font>
+                        </h5>
+                </div>
+            </section>
+
+
+
+            <iframe src="{{url_for('form_page')}}" crolling="no" scrolling="" style="overflow:hidden; display:block; border: none; height:100vh;width:100%;"></iframe>
+
+
+
+		<!-- Footer -->
+        <section id="footer">
+            <div class="inner">
+                <div class="content">
+                        <a href="{{url_for('eng')}}" class="logo"><img id="imgsize" src="../static/image/scadaict_eng_002.png" style="position: absolute; width: 8em; height: 2.2em; top: 16.24px;"></a>
+                </div>
+                <div class="content">
+                    <article>
+                        <h2><font face = 'NanumGothic'>SCADA ICT CO.</font></h2>
+                        <font face = 'NanumGothic'><b>607-ho, 6F, 219, Gonghang-daero, Gangseo-gu, Seoul, Republic of Korea</b></font><br>
+                        <font face = 'NanumGothic'><b>Tel : +82-2-6956-3035</b></font><br>
+                        <font face = 'NanumGothic'><b>Fax : +82-70-7966-3045</b></font><br>
+                        <font face = 'NanumGothic'><b>E-mail : <a href="mailto:info@scadaict.com">info@scadaict.com</a></b></font></p>
+                    </article>
+                    <article>
+                        <form method="post" action="">
+                            <ul class="actions">
+                                <li><a class="button alt" rel="roopener" target="_blank" href="../static/Certificate of Besiness Registration _ SCADA ICT.pdf" download><font face = 'NanumGothic'><b>Business Registration Download</b></font></a></li>
+                            </ul>
+                        </form>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="footer">
+            <div class="copyright">
+                    Copyright&copy; SCADA ICT CO. All Rights Reserved.</br>
+                    <font color = #4494D1> Made by <a href="mailto:danielqoo@scadaict.com"> <font color = #4494D1>Danielqoo</font></a></font>
+            </div>
+        </section>
+        
+
+		<!-- Scripts -->
+        <script src="../static/js/skel.min.js"></script>
+        <script src="../static/js/util.js"></script>
+        <script src="../static/js/main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+        <!-- Back To Top -->
+        <a href="#" class="bck"></a>
+        <link rel="stylesheet" href="../static/css/jquery.back-to-top.css">
+        <script src="../static/js/jquery.back-to-top.js"></script>
+        <script>
+        $(function(){
+            $('.bck').backToTop();		
+        });
+        </script>
+
+</body>
+</html>

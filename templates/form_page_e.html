@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Online Contact</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="../static/css/form.css" >
+        <script src="../static/js/form.js"></script>
+    </head>
+    <body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+        <br>
+        <h2><p style="text-align: center;"><font color = #f1f1f1 face = 'NanumGothic'>Contact our Support and Sales team
+            <br>Need to get in touch with the team? We're all ears.
+            </font></p></h2>
+            <br>
+        <div class="container">
+            <div id="form-main">
+                <div id="form-div">
+                    <form class="montform" id="reused_form" >
+                        <p class="name">
+                            <input name="name" type="text" class="feedback-input" required placeholder="Name" id="name" />
+                        </p>
+                        <p class="email">
+                            <input name="email" type="email" required class="feedback-input" id="email" placeholder="Email" />
+                        </p>
+                        <p class="text">
+                            <textarea name="message" class="feedback-input" id="comment" placeholder="Message"></textarea>
+                        </p>
+                        <div class="submit">
+                            <button type="submit" class="button-blue">Submit</button>
+                            <div class="ease"></div>
+                        </div>
+                    </form>
+                    <div id="error_message" style="width:100%; height:100%; display:none; ">
+                        <h4>
+                            Error
+                        </h4>
+                        Sorry there was an error sending your form. 
+                    </div>
+                    <div id="success_message" style="width:100%; height:100%; display:none; "> <h2>Success! Your Message was Sent Successfully.</h2> </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var omitformtags=["input", "textarea", "select"]
+            omitformtags=omitformtags.join("|")
+            function disableselect(e){
+            if (omitformtags.indexOf(e.target.tagName.toLowerCase())==-1)
+            return false
+            }
+            function reEnable(){
+            return true
+            }
+            if (typeof document.onselectstart!="undefined")
+            document.onselectstart=new Function ("return false")
+            else{
+            document.onmousedown=disableselect
+            document.onmouseup=reEnable
+            }
+        </script>
+    </body>
+</html>

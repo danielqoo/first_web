@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        body, html{overflow: auto;}
+        #wrap{width: 1200px; height: 720px; margin: 0 auto;}
+        header{width: 100%; height: 10%;}
+        nav{width: 100%;}
+        aside{width: 100%; height: 80%;}
+
+        /*화면 너비가 0 ~ 1200px*/
+        @media (max-width: 1220px){}
+        /*화면 너비가 0 ~ 768px*/
+        @media (max-width: 768px){}
+        /*화면 너비가 0 ~ 480px*/
+        @media (max-width: 480px){
+            #wrap{width: 100%;}
+            header{height: 17%;}
+            #logindiv{width: 40%;}
+            #imgsize{position: relative; left: 97px;}
+            #bow{font-size: 150%; position: relative; right: 20%; margin-top: 35px;}
+            #nicknamelabel{right: 7%; margin-top: -20%;}
+        }
+        
+    </style>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <script> L_NO_TOUCH = false;L_DISABLE_3D = false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.js"></script>
+    <script type="text/javascript" src="../static/myscript.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <!--로고 및 닉네임 로그아웃-->
+        <header>
+            <div id="logindiv" style="width: 30%; height: 100%; float: left;">
+                <a href="{{url_for('gohome')}}"><img id="imgsize" src="../static/logo.png" style="width: 200px; height: 70px; float: left;"></a>
+            </div>
+                <br>
+                <label id="nicknamelabel" style="float: right; font-size: 150%; position: relative; top: 25%;">안녕하세요!!!{{nickname}}님
+                    <a id="logout" href="/" class="ui basic brown tiny button">로그아웃</a>
+                <label>
+        </header>
+        <!--여러링크-->
+        <nav>
+            <table style="table-layout: fixed; width: 100%; height: 100%; border-top: 3px solid brown; border-bottom: 3px solid brown;">
+                <tr>
+                    <th><a href="{{url_for('check')}}" style="color: rgb(177, 103, 103);">홈</a></th>
+                    <th><a href="{{url_for('signup')}}" style="color: rgb(177, 103, 103);">회원가입</a></th>
+                    <th><a href="{{url_for('noticeboard')}}" style="color: rgb(177, 103, 103);">게시판</a></th>
+                </tr>
+            </table>
+        </nav>
+        <br>
+        <!--게시글 작성-->
+        <aside>
+            <form class="ui form" action="{{url_for('write')}}" method="POST">
+                <br>
+                <h2>제목</h2>
+                <input type="text" name="title" placeholder="제목입력">
+                <br>
+                <h2>내용</h2>
+                <br>
+                <textarea class="ui textarea" name='content' placeholder="내용입력"></textarea>
+                <br>
+                <br>
+                <button type="submit" class="ui brown button" style="float: right;">작성완료</button>
+            </form>
+            <a href="javascript:history.back()"><button class="ui brown button" style="float: left;">뒤로가기</button></a>
+        </aside>
+    </div>
+</body>
+</html>

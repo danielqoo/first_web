@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Eng.ver - SmartFactory,Education,Consulting,SystemsIntergrations</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="apple-touch-icon" sizes="180x180" href="static/image/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="static/image/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="static/image/favicon-16x16.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="static/image/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="static/image/android-chrome-512x512.png">
+        <link rel="manifest" href="static/image/site.webmanifest">
+        <link rel="mask-icon" href="static/image/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#2d89ef">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="../static/css/main.css">
+        <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+        <script src="https://kit.fontawesome.com/87b0d47aaf.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.0.6/dist/jBox.all.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.0.6/dist/jBox.all.min.css" rel="stylesheet">
+        <style>
+            .wrap {position: absolute;left: 0;bottom: 40px;width: 288px;height: 132px;margin-left: -144px;text-align: left;overflow: hidden;font-size: 12px;font-family: 'Malgun Gothic', dotum, '돋움', sans-serif;line-height: 1.5;}
+            .wrap * {padding: 0;margin: 0;}
+            .wrap .info {width: 286px;height: 122px;border-radius: 5px;border-bottom: 2px solid #ccc;border-right: 1px solid #ccc;overflow: hidden;background: #fff;}
+            .wrap .info:nth-child(1) {border: 0;box-shadow: 0px 1px 2px #888;}
+            .info .title {padding: 5px 0 0 10px;height: 30px;background: #eee;border-bottom: 1px solid #ddd;font-size: 18px;font-weight: bold;}
+            .info .close {position: absolute;top: 10px;right: 10px;color: #888;width: 17px;height: 17px;background: url('http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png');}
+            .info .close:hover {cursor: pointer;}
+            .info .body {position: relative;overflow: hidden;}
+            .info .desc {position: relative;margin: 13px 0 0 90px;height: 75px;}
+            .desc .ellipsis {overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+            .desc .jibun {font-size: 11px;color: #888;margin-top: -2px;}
+            .info .img {position: absolute;top: 6px;left: 5px;width: 73px;height: 71px;border: 1px solid #ddd;color: #888;overflow: hidden;}
+            .info:after {content: '';position: absolute;margin-left: -12px;left: 50%;bottom: 0;width: 22px;height: 12px;background: url('http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
+            .info .link {color: #5085BB;}
+        </style>
+    </head>
+    <body>
+
+        <!-- Header -->
+            <header id="header">
+                <div class="inner">
+                    <a href="{{url_for('eng')}}" class="logo"><img id="imgsize" src="../static/image/scadaict_eng_001.png" style="position: absolute; width: 8em; height: 2.2em; top: 16.24px;"></a>
+                    <nav id="nav">
+                        <a href= "{{url_for('about')}}"><font face = 'NanumGothic'>About</font></a>
+                        <a href= "{{url_for('policy')}}"><font face = 'NanumGothic'>Korean MSS's policy</font></a>
+                        <a href= "{{url_for('solution')}}"><font face = 'NanumGothic'>Solution</font></a>
+                        <a href= "{{url_for('stories')}}"><font face = 'NanumGothic'>Stories</font></a>
+                        <a href= "{{url_for('contact')}}"><font face = 'NanumGothic'>Contact</font></a>
+                        <a href= "{{url_for('educenter')}}"><font face = 'NanumGothic'>Educenter</font></a>
+                </nav>
+                </div>
+            </header>
+            <a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+    	<!-- Banner -->
+            <section id="banner002">
+                <div class="inner">
+                    <h2><font face = 'NanumGothic'>Company Introduction</font></h2>
+                        <h5><font face = 'NanumGothic'>SCADA ICT CO. is a specialized enterprise in factory solutions that provides ERP, MES/POP, SCM, QMS</font><br>
+                            <font face = 'NanumGothic'>and embedded system around Smart Factory and E-Business.</font>
+                        </h5>
+                </div>
+            </section>
+
+
+
+    <iframe src="{{url_for('form_page')}}" crolling="no" scrolling="" style="overflow:hidden; display:block; border: none; height:100vh;width:100%;"></iframe>
+
+
+
+		<!-- Footer -->
+        <section id="footer">
+            <div class="inner">
+                <div class="content">
+                        <a href="{{url_for('eng')}}" class="logo"><img id="imgsize" src="../static/image/scadaict_eng_002.png" style="position: absolute; width: 8em; height: 2.2em; top: 16.24px;"></a>
+                </div>
+                <div class="content">
+                    <article>
+                        <h2><font face = 'NanumGothic'>SCADA ICT CO.</font></h2>
+                        <font face = 'NanumGothic'><b>607-ho, 6F, 219, Gonghang-daero, Gangseo-gu, Seoul, Republic of Korea</b></font><br>
+                        <font face = 'NanumGothic'><b>Tel : +82-2-6956-3035</b></font><br>
+                        <font face = 'NanumGothic'><b>Fax : +82-70-7966-3045</b></font><br>
+                        <font face = 'NanumGothic'><b>E-mail : <a href="mailto:info@scadaict.com">info@scadaict.com</a></b></font></p>
+                    </article>
+                    <article>
+                        <form method="post" action="">
+                            <ul class="actions">
+                                <li><a class="button alt" rel="roopener" target="_blank" href="../static/Certificate of Besiness Registration _ SCADA ICT.pdf" download><font face = 'NanumGothic'><b>Business Registration Download</b></font></a></li>
+                            </ul>
+                        </form>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="footer">
+            <div class="copyright">
+                    Copyright&copy; SCADA ICT CO. All Rights Reserved.</br>
+                    <font color = #4494D1> Made by <a href="mailto:danielqoo@scadaict.com"> <font color = #4494D1>Danielqoo</font></a></font>
+            </div>
+        </section>
+        
+
+		<!-- Scripts -->
+        <script src="../static/js/skel.min.js"></script>
+        <script src="../static/js/util.js"></script>
+        <script src="../static/js/main.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/StephanWagner/jBox@v1.0.6/dist/jBox.all.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=96279344616c75c49e9e404321b95c9e"></script>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=LIBRARY"></script>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services,clusterer,drawing"></script>
+
+        <!-- 카카오맵 -->
+        <script>
+            var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+                mapOption = { 
+                    center: new kakao.maps.LatLng(37.565604, 126.831987), // 지도의 중심좌표
+                    level: 6 // 지도의 확대 레벨
+                };
+        
+            var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+        
+        // 일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 지도타입 컨트롤을 생성합니다
+            var mapTypeControl = new kakao.maps.MapTypeControl();
+        
+        // 지도에 컨트롤을 추가해야 지도위에 표시됩니다
+        // kakao.maps.ControlPosition은 컨트롤이 표시될 위치를 정의하는데 TOPRIGHT는 오른쪽 위를 의미합니다
+            map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
+        
+        // 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
+            var zoomControl = new kakao.maps.ZoomControl();
+            map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+
+        // 지도에 마커를 표시합니다 
+            var marker = new kakao.maps.Marker({
+                map: map, 
+                position: new kakao.maps.LatLng(37.559946, 126.831987)
+            });
+
+        // 커스텀 오버레이에 표시할 컨텐츠 입니다
+        // 커스텀 오버레이는 아래와 같이 사용자가 자유롭게 컨텐츠를 구성하고 이벤트를 제어할 수 있기 때문에
+        // 별도의 이벤트 메소드를 제공하지 않습니다 
+            var content = '<div class="wrap">' + 
+                        '    <div class="info">' + 
+                        '        <div class="title">' + 
+                        '            <font color = #111111>SCADA ICT COMPANY</font>' + 
+                        '            <div class="close" onclick="closeOverlay()" title="닫기"></div>' + 
+                        '        </div>' + 
+                        '        <div class="body">' + 
+                        '            <div class="img">' +
+                        '                <img src="../static/image/mstile-150x150.png" width="73" height="70">' +
+                        '            </div>' + 
+                        '            <div class="desc">' + 
+                        '                <div class="ellipsis"><a href="http://kko.to/fHL0Ce1jB" target="_blank" class="link">'+
+                        '                <font color = #111111>607-ho, 6F, 219, Gonghang-daero, Gangseo-gu<br>' +
+                        '                , Seoul, Republic of Korea</font></div></a>' + 
+                        '                <div class="jibun ellipsis"><a href="http://naver.me/xMzNUaFm" target="_blank" class="link">'+
+                        '                ▶ View Naver Map ◀' + 
+                        '            </div>' + 
+                        '        </div>' + 
+                        '    </div>' +    
+                        '</div>';
+
+        // 마커 위에 커스텀오버레이를 표시합니다
+        // 마커를 중심으로 커스텀 오버레이를 표시하기위해 CSS를 이용해 위치를 설정했습니다
+            var overlay = new kakao.maps.CustomOverlay({
+                content: content,
+                map: map,
+                position: marker.getPosition()       
+            });
+
+        // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
+            kakao.maps.event.addListener(marker, 'click', function() {
+                overlay.setMap(map);
+            });
+
+        // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다 
+            function closeOverlay() {
+                overlay.setMap(null);     
+            }
+
+        </script>
+
+        <!-- Back To Top -->
+        <a href="#" class="bck"></a>
+        <link rel="stylesheet" href="../static/css/jquery.back-to-top.css">
+        <script src="../static/js/jquery.back-to-top.js"></script>
+        <script>
+        $(function(){
+            $('.bck').backToTop();		
+        });
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko"> 
+<head>
+    <meta charset="UTF-8">
+    <title>pop_up_001</title>
+    <!-- jQuery 라이브러리 참조 -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script><!--제이쿼리 최신버전 사용-->
+    <script type="text/javascript" src="static/js/jquery.cookie.js"></script>
+    <style>
+
+        body{
+            padding:20px;
+        }
+
+        a{
+            color:blue;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        a:hover{
+            color:red;
+        }
+
+        .pop_lay{
+                width: 38em;
+                height: 45em;
+                position:fixed;
+                top:5em; left:2em;
+                border:1px solid black;
+                background-color: #f3f3f3;
+                z-index: 999999;
+            }
+
+        .pop_lay h1{
+            text-align: center;
+        }
+
+        .pop_lay p{
+            font-size:12px;
+        }
+
+        .pop_lay .footer{
+            position:absolute;
+            right: 0; bottom: 0;
+            width:100%;
+            text-align: right;
+            background-color: #d4d4d4;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+        // 닫기 버튼 클릭시
+        $("#close").click(function(){
+        // 링크의 페이지 이동 속성 강제 차단
+            event.preventDefault();
+        if ($('#nopopup').is(":checked")){
+            // 쿠키값을 "Y"로 하여 하루동안 저장시킴
+            $.cookie("nopopup", "Y", {
+                expires : 1
+            });
+        }
+        // 팝업창 닫기
+        $(".pop_lay").css('display','none');
+            });
+        });
+    </script>
+ </head>
+ <body>
+        <div class="pop_lay">
+            <img src="../static/image/pop_up_001.jpg" width="100%" height="100%">
+            <div class="footer">
+                <label for="nopopup"> 오늘 하루 이 창 열지 않음 </label>
+                <input type="checkbox" id="nopopup">
+                <a href="#" id="close">닫기</a>
+            </div>  
+        </div>
+    </div>
+</body>
+</html>
+
